@@ -1,0 +1,41 @@
+.clients {
+	margin-bottom: 115px;
+    &__inner {
+        padding: 100px 10px 0;
+    }
+
+    &__title {
+        font-weight: bold;
+        font-size: 40px;
+        line-height: 60px;
+		text-align: center;
+		margin-bottom: 50px;
+    }
+
+	&__list {
+		display: grid;
+		grid-template-columns: auto auto auto auto;
+		justify-content: center;
+		gap: 64px;
+	}
+}
+
+@media(max-width: 881px) {
+	.clients {
+		margin-bottom: 77px;
+		&__inner {
+			padding: 50px 10px 0;
+		}
+
+		&__list {
+			grid-template-columns: auto auto;
+			gap: 50px;
+		}
+	}
+}
+
+@media(max-width: 451px) {
+	.clients__list {
+		grid-template-columns: auto;
+	}
+}

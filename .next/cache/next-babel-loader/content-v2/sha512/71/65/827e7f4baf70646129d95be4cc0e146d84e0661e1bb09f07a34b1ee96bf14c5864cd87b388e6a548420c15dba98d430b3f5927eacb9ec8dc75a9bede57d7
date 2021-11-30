@@ -1,0 +1,1 @@
+{"ast":null,"code":"export { useUserOnPage } from \"./useUserOnPage\";","map":{"version":3,"sources":["/home/g322h/resum/project3/hooks/index.ts"],"names":["useUserOnPage"],"mappings":"AAAA,SAASA,aAAT,QAA8B,iBAA9B","sourcesContent":["export { useUserOnPage } from \"./useUserOnPage\"\r\n"]},"metadata":{},"sourceType":"module"}

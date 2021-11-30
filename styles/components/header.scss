@@ -1,0 +1,158 @@
+.header {
+    &__inner {
+        display: grid;
+        grid-template-columns: 1fr auto auto;
+        padding: 19px 0;
+        align-items: center;
+        margin-bottom: 25px;
+    }
+
+	&__adaptive {
+		display: none;
+	}
+
+    &__content {
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo {
+        width: 178px;
+    }
+
+    &__nav {
+        margin-right: 24px;
+        font-weight: 500;
+        ul {
+            display: flex;
+            li:not(:last-child) {
+                padding-right: 31px;
+            }
+        }
+        &-link {
+            &.active {
+                font-weight: 700;
+            }
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        a {
+            margin-right: 24px;
+            padding: 10px 25px;
+            font-weight: 600;
+        }
+        .sign__in {
+            border: 1px solid #bcd0e5;
+            border-radius: 4px;
+        }
+        .sign__up {
+            color: #fff;
+            background-color: var(--green);
+            border: 1px solid var(--green);
+            border-radius: 4px;
+        }
+        .theme {
+            margin-top: 8px;
+        }
+    }
+
+    &__burger {
+        display: none;
+        position: relative;
+        width: 40px;
+        height: 30px;
+
+        & span,
+        &:after,
+        &:before {
+            height: 3px;
+            background-color: var(--black);
+            width: 100%;
+            position: absolute;
+            margin: 0 auto;
+        }
+
+        & span {
+            top: 14px;
+        }
+
+        &:before {
+            content: "";
+            top: 0px;
+        }
+
+        &:after {
+            content: "";
+            bottom: 0px;
+        }
+    }
+}
+
+@media (max-width: 960px) {
+    .container {
+        padding: 0;
+    }
+
+    .header {
+        &__inner {
+            box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.25);
+			position: relative;
+        }
+
+		&__adaptive {
+			display: block;
+			position: absolute;
+			height: 83px;
+			width: 100%;
+			background-color: #fff;
+			z-index: 3;
+		}
+
+        &__logo {
+            padding-left: 30px;
+			z-index: 5;
+        }
+
+        &__content {
+            display: block;
+            position: absolute;
+            top: 83px;
+			transform: translateY(-150%);
+            box-shadow: #ccc;
+            width: 100%;
+			transition: all .5s;
+            box-shadow: 0 4px 2px -2px rgba(36, 36, 36, 0.17);
+			z-index: 1;
+			background-color: #fff;
+			&.active {
+				transform: translateY(0%);
+				transition: all .5s;
+			}
+        }
+
+        &__nav ul {
+            display: block;
+            text-align: center;
+            & li {
+                margin: 20px 0px;
+                padding-right: 0px !important;
+            }
+        }
+
+        &__buttons {
+            justify-content: center;
+            padding-bottom: 20px;
+        }
+
+        &__burger {
+            display: block;
+            margin-right: 27px;
+			z-index: 5;
+        }
+    }
+}
+
+
+
